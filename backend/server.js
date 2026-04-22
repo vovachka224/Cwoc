@@ -200,7 +200,22 @@ io.on('connection', async (socket) => {
   });
 });
 
-mongoose.connect(process.env.MONGODB_URI)
+console.log("ENV CHECK:", process.env.MONGODB_URI);
+
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err.message, err.stack);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (reason) => {
+  console.error('Unhandled Rejection:', reason);
+  process.exit(1);
+});
+
+mongoose.connect(process.env.MONGODB_URI, {
+  serverSelectionTimeoutMS: 15000,
+  connectTimeoutMS: 15000,
+})
   .then(() => {
     console.log('✅ MongoDB connected');
     const PORT = process.env.PORT || 5000;
