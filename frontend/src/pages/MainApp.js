@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-
 import ChatList from '../components/ChatList';
 import ChatWindow from '../components/ChatWindow';
 import api from '../utils/api';
 
 export default function MainApp() {
-
   const [chats, setChats] = useState([]);
   const [selectedChat, setSelectedChat] = useState(null);
 
