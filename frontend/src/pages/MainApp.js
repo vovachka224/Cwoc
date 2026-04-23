@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+
 import ChatList from '../components/ChatList';
 import ChatWindow from '../components/ChatWindow';
 import api from '../utils/api';
 
 export default function MainApp() {
-  const { user } = useAuth();
+
   const [chats, setChats] = useState([]);
   const [selectedChat, setSelectedChat] = useState(null);
 

@@ -121,7 +121,7 @@ export default function ChatWindow({ chat, onChatUpdate }) {
     loadMessages();
     emit('chat:join', chat._id);
     emit('message:read', { chatId: chat._id });
-  }, [chat._id]);
+  }, [chat._id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => { scrollToBottom(); }, [messages, typingUsers]);
 
