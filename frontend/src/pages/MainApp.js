@@ -44,8 +44,8 @@ export default function MainApp() {
           />
         ) : (
           <div className="welcome-screen">
-            <div className="welcome-icon">✈</div>
-            <h2>Welcome to Telegraph</h2>
+            <div className="welcome-icon">🍄</div>
+            <h2>Welcome to Cwoc</h2>
             <p>Select a chat to start messaging or search for users to connect with.</p>
           </div>
         )}

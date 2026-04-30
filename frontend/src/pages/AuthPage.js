@@ -29,8 +29,8 @@ export default function AuthPage() {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-logo">
-          <div className="auth-logo-icon">✈</div>
-          <h1>Telegraph</h1>
+          <div className="auth-logo-icon">🍄</div>
+          <h1>Cwoc</h1>
           <p>Fast. Simple. Secure.</p>
         </div>
 
